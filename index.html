@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Hands In Inclusion Philippines</title>
+	<link rel="stylesheet" href="HNI_main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css">
+
+</head>
+<body>
+	<section class="header">
+		<nav>
+			<a href="HNI_main.html"><img src="IMAGES/Logo.jpg" class="logo-img"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fas fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="">HOME</a></li>
+					<li><a href="">ABOUT</a></li>
+					<li><a href="">EVENTS</a></li>
+					<li><a href="">CONTACT</a></li>
+					<li><a href="">STORIES</a></li>
+					<li><a href="">PHOTO GALLERY</a></li>
+					<li><a href="">STORE</a></li>
+				</ul>
+			</div>
+			<i class="fas fa-bars" onclick="showMenu()"></i>
+			<span id="mobileIcons"></span>
+		</nav>
+		
+		<div class="text-box">
+			<h1>Hands In Inclusion Philippines</h1>
+			<br><p><em>United for change, empowering every voice.</em></p>
+			<p><em>Magkakaisa para sa pagbabago, Pinagtitibay ang Bawat Pilipino.</em></p></br>
+			<a href="" class="visit">Visit Us</a>
+		</div>
+	</section>
+	
+	<!--About Us-->
+	<section class="about-us">
+		<h1>About Us</h1>
+		<div class="row">
+			<div class="column">
+				<h3>Vision</h3>
+				<p>Because of inclusion, Persons with disabilities (PWDs) will be embraced and supported by even more ordinary people in the world.</p>
+			</div>
+			<div class="column">
+				<h3>Mission</h3>
+				<p>We as a social awareness society, are encouraging ordinary people to be informed of the inclusion of persons with disabilities (PWDs), and its benefits for them by means of social media and other possible effective means.</p>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		// Function to detect screen size and add appropriate class to body element
+		function detectScreenSize() {
+			if (window.innerWidth >= 701) {
+				document.body.classList.add('desktop');
+			} else {
+				document.body.classList.remove('desktop');
+			}
+		}
+
+		// Call the function on page load and whenever the window is resized
+		window.addEventListener('load', detectScreenSize);
+		window.addEventListener('resize', detectScreenSize);
+
+		// Function to show the navigation menu
+		function showMenu() {
+			var navLinks = document.getElementById("navLinks");
+			navLinks.style.right = "0";
+		}
+
+		// Function to hide the navigation menu
+		function hideMenu() {
+			var navLinks = document.getElementById("navLinks");
+			navLinks.style.right = "-200px";
+		}
+	</script>
+
+</body>
+</html>
